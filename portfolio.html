@@ -20,7 +20,7 @@
   </head>
   <body>
     <!---------------------------Header----------------------->
-    <!-- <header class="header">
+    <header class="header">
       <div class="header__container container">
         <nav class="main-nav">
           <a href="" lang="en" class="logo link"
@@ -60,8 +60,97 @@
             >
           </li>
         </ul>
+        <button type="button" class="btn-menu-open">
+          <svg
+            class="btn-menu__icon"
+            aria-label="Переключатель мобильного меню"
+            width="40"
+            height="40"
+          >
+            <use href="./images/icons.svg#icon-menu-open"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <!-- mobile menu -->
+      <div class="mob-menu is-hidden">
+        <div class="mob-container">
+          <div class="mob-menu-top">
+            <button type="button" class="btn-menu-close">
+              <svg class="btn-menu-close__icon" width="40" height="40">
+                <use href="./images/icons.svg#icon-close-mobile-menu"></use>
+              </svg>
+            </button>
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__item">
+                <a href="./index.html" class="mob-menu__link link">Студия</a>
+              </li>
+              <li class="mob-menu__item">
+                <a href="" class="mob-menu__link mob-menu__link--current link"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mob-menu__item">
+                <a href="" class="mob-menu__link link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-menu-bottom">
+            <ul class="mob-contacts list">
+              <li class="mob-contacts-tel__item">
+                <a href="tel:+380961111111" class="mob-contacts-tel__link link"
+                  >096 111 11 11</a
+                >
+              </li>
+              <li class="mob-contacts-mail__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mob-contacts-mail__link link"
+                  >info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="mob-social list">
+              <li class="mob-social__item">
+                <a
+                  href=""
+                  class="mob-social__link link"
+                  target="_blank"
+                  rel="noopener nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mob-social__item">
+                <a
+                  href=""
+                  class="mob-social__link link"
+                  target="_blank"
+                  rel="noopener nofollow"
+                  >Twitter</a
+                >
+              </li>
+              <li class="mob-social__item">
+                <a
+                  href=""
+                  class="mob-social__link link"
+                  target="_blank"
+                  rel="noopener nofollow"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mob-social__item">
+                <a
+                  href=""
+                  class="mob-social__link link"
+                  target="_blank"
+                  rel="noopener nofollow"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <!-------------------Gallery of works--------------->
     <main class="gallery">
       <section class="section">
@@ -90,11 +179,30 @@
             <li class="work">
               <a href="" class="work__link link">
                 <div class="work__top-wrap">
-                  <img
-                    src="./images/img-work-1.jpg"
-                    alt="открытый ноутбук"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-work-1.jpg    1x,
+                        ./images/img-work-1-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)" />
+                    <source
+                      srcset="
+                        ./images/img-work-1-tabl1x.jpg 1x,
+                        ./images/img-work-1-tabl2x.jpg 2x
+                      "
+                      media="(min-width: 768px)" />
+                    <source
+                      srcset="
+                        ./images/img-work-1-mob1x.jpg 1x,
+                        ./images/img-work-1-mob2x.jpg 2x
+                      "
+                      media="(min-width: 320px)" />
+                    <img
+                      src="./images/img-work-1.jpg"
+                      alt="открытый ноутбук"
+                      width="370"
+                  /></picture>
                   <p class="work__top-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -110,11 +218,30 @@
             <li class="work">
               <a href="" class="work__link link">
                 <div class="work__top-wrap">
-                  <img
-                    src="./images/img-work-2.jpg"
-                    alt="два баскетболиста"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-work-2.jpg    1x,
+                        ./images/img-work-2-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)" />
+                    <source
+                      srcset="
+                        ./images/img-work-2-tabl1x.jpg 1x,
+                        ./images/img-work-2-tabl2x.jpg 2x
+                      "
+                      media="(min-width: 768px)" />
+                    <source
+                      srcset="
+                        ./images/img-work-2-mob1x.jpg 1x,
+                        ./images/img-work-2-mob2x.jpg 2x
+                      "
+                      media="(min-width: 320px)" />
+                    <img
+                      src="./images/img-work-2.jpg"
+                      alt="два баскетболиста"
+                      width="370"
+                  /></picture>
                   <p class="work__top-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -130,11 +257,30 @@
             <li class="work">
               <a href="" class="work__link link">
                 <div class="work__top-wrap">
-                  <img
-                    src="./images/img-work-3.jpg"
-                    alt="рисунок рыбы"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-work-3.jpg    1x,
+                        ./images/img-work-3-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)" />
+                    <source
+                      srcset="
+                        ./images/img-work-3-tabl1x.jpg 1x,
+                        ./images/img-work-3-tabl2x.jpg 2x
+                      "
+                      media="(min-width: 768px)" />
+                    <source
+                      srcset="
+                        ./images/img-work-3-mob1x.jpg 1x,
+                        ./images/img-work-3-mob2x.jpg 2x
+                      "
+                      media="(min-width: 320px)" />
+                    <img
+                      src="./images/img-work-3.jpg"
+                      alt="рисунок рыбы"
+                      width="370"
+                  /></picture>
                   <p class="work__top-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -150,11 +296,30 @@
             <li class="work">
               <a href="" class="work__link link">
                 <div class="work__top-wrap">
-                  <img
-                    src="./images/img-work-4.jpg"
-                    alt="наушники"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-work-4.jpg    1x,
+                        ./images/img-work-4-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)" />
+                    <source
+                      srcset="
+                        ./images/img-work-4-tabl1x.jpg 1x,
+                        ./images/img-work-4-tabl2x.jpg 2x
+                      "
+                      media="(min-width: 768px)" />
+                    <source
+                      srcset="
+                        ./images/img-work-4-mob1x.jpg 1x,
+                        ./images/img-work-4-mob2x.jpg 2x
+                      "
+                      media="(min-width: 320px)" />
+                    <img
+                      src="./images/img-work-4.jpg"
+                      alt="наушники"
+                      width="370"
+                  /></picture>
                   <p class="work__top-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -170,11 +335,30 @@
             <li class="work">
               <a href="" class="work__link link">
                 <div class="work__top-wrap">
-                  <img
-                    src="./images/img-work-5.jpg"
-                    alt="две коробки"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-work-5.jpg    1x,
+                        ./images/img-work-5-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)" />
+                    <source
+                      srcset="
+                        ./images/img-work-5-tabl1x.jpg 1x,
+                        ./images/img-work-5-tabl2x.jpg 2x
+                      "
+                      media="(min-width: 768px)" />
+                    <source
+                      srcset="
+                        ./images/img-work-5-mob1x.jpg 1x,
+                        ./images/img-work-5-mob2x.jpg 2x
+                      "
+                      media="(min-width: 320px)" />
+                    <img
+                      src="./images/img-work-5.jpg"
+                      alt="две коробки"
+                      width="370"
+                  /></picture>
                   <p class="work__top-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -190,11 +374,30 @@
             <li class="work">
               <a href="" class="work__link link">
                 <div class="work__top-wrap">
-                  <img
-                    src="./images/img-work-6.jpg"
-                    alt="монитор"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-work-6.jpg    1x,
+                        ./images/img-work-6-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)" />
+                    <source
+                      srcset="
+                        ./images/img-work-6-tabl1x.jpg 1x,
+                        ./images/img-work-6-tabl2x.jpg 2x
+                      "
+                      media="(min-width: 768px)" />
+                    <source
+                      srcset="
+                        ./images/img-work-6-mob1x.jpg 1x,
+                        ./images/img-work-6-mob2x.jpg 2x
+                      "
+                      media="(min-width: 320px)" />
+                    <img
+                      src="./images/img-work-6.jpg"
+                      alt="монитор"
+                      width="370"
+                  /></picture>
                   <p class="work__top-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -210,7 +413,27 @@
             <li class="work">
               <a href="" class="work__link link">
                 <div class="work__top-wrap">
-                  <img src="./images/img-work-7.jpg" alt="журнал" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-work-7.jpg    1x,
+                        ./images/img-work-7-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)" />
+                    <source
+                      srcset="
+                        ./images/img-work-7-tabl1x.jpg 1x,
+                        ./images/img-work-7-tabl2x.jpg 2x
+                      "
+                      media="(min-width: 768px)" />
+                    <source
+                      srcset="
+                        ./images/img-work-7-mob1x.jpg 1x,
+                        ./images/img-work-7-mob2x.jpg 2x
+                      "
+                      media="(min-width: 320px)" />
+                    <img src="./images/img-work-7.jpg" alt="журнал" width="370"
+                  /></picture>
                   <p class="work__top-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -226,7 +449,27 @@
             <li class="work">
               <a href="" class="work__link link">
                 <div class="work__top-wrap">
-                  <img src="./images/img-work-8.jpg" alt="лейба" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-work-8.jpg    1x,
+                        ./images/img-work-8-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)" />
+                    <source
+                      srcset="
+                        ./images/img-work-8-tabl1x.jpg 1x,
+                        ./images/img-work-8-tabl2x.jpg 2x
+                      "
+                      media="(min-width: 768px)" />
+                    <source
+                      srcset="
+                        ./images/img-work-8-mob1x.jpg 1x,
+                        ./images/img-work-8-mob2x.jpg 2x
+                      "
+                      media="(min-width: 320px)" />
+                    <img src="./images/img-work-8.jpg" alt="лейба" width="370"
+                  /></picture>
                   <p class="work__top-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -242,11 +485,30 @@
             <li class="work">
               <a href="" class="work__link link">
                 <div class="work__top-wrap">
-                  <img
-                    src="./images/img-work-9.jpg"
-                    alt="ноутбук"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-work-9.jpg    1x,
+                        ./images/img-work-9-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)" />
+                    <source
+                      srcset="
+                        ./images/img-work-9-tabl1x.jpg 1x,
+                        ./images/img-work-9-tabl2x.jpg 2x
+                      "
+                      media="(min-width: 768px)" />
+                    <source
+                      srcset="
+                        ./images/img-work-9-mob1x.jpg 1x,
+                        ./images/img-work-9-mob2x.jpg 2x
+                      "
+                      media="(min-width: 320px)" />
+                    <img
+                      src="./images/img-work-9.jpg"
+                      alt="ноутбук"
+                      width="370"
+                  /></picture>
                   <p class="work__top-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -264,10 +526,10 @@
       </section>
     </main>
     <!---------------------Footer---------------------->
-    <!-- <footer class="footer">
-      <div class="footer__container container"> -->
-    <!--footer adress-->
-    <!-- <div class="footer__adress">
+    <footer class="footer">
+      <div class="footer__container container">
+        <!--footer adress-->
+        <div class="footer__adress">
           <a href="" lang="en" class="footer__logo logo link"
             ><span class="logo--accent">Web</span>Studio</a
           >
@@ -290,9 +552,9 @@
               </li>
             </ul>
           </address>
-        </div> -->
-    <!--footer socials -->
-    <!-- <div class="footer__socials">
+        </div>
+        <!--footer socials -->
+        <div class="footer__socials">
           <p class="footer__text">присоединяйтесь</p>
           <ul class="socials list">
             <li class="socials__item">
@@ -320,10 +582,10 @@
               ></a>
             </li>
           </ul>
-        </div> -->
-    <!--footer form-->
-    <!-- <div class="footer-form">
-          <form>
+        </div>
+        <!--footer form-->
+        <div class="footer__form">
+          <form class="footer-form">
             <p class="footer__text">Подпишитесь на рассылку</p>
             <input
               type="email"
@@ -339,7 +601,8 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

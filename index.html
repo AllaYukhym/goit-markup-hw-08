@@ -20,7 +20,7 @@
   </head>
   <body>
     <!-------------------------Header----------------------->
-    <!-- <header class="header">
+    <header class="header">
       <div class="header__container container">
         <nav class="main-nav">
           <a href="" lang="en" class="logo link"
@@ -62,19 +62,110 @@
             >
           </li>
         </ul>
+        <button type="button" class="btn-menu-open">
+          <svg
+            class="btn-menu__icon"
+            aria-label="Переключатель мобильного меню"
+            width="40"
+            height="40"
+          >
+            <use href="./images/icons.svg#icon-menu-open"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <!-- mobile menu -->
+      <div class="mob-menu is-hidden">
+        <div class="mob-container">
+          <div class="mob-menu-top">
+            <button type="button" class="btn-menu-close">
+              <svg class="btn-menu-close__icon" width="40" height="40">
+                <use href="./images/icons.svg#icon-close-mobile-menu"></use>
+              </svg>
+            </button>
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__item">
+                <a href="" class="mob-menu__link mob-menu__link--current link"
+                  >Студия</a
+                >
+              </li>
+              <li class="mob-menu__item">
+                <a href="./portfolio.html" class="mob-menu__link link"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mob-menu__item">
+                <a href="" class="mob-menu__link link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-menu-bottom">
+            <ul class="mob-contacts list">
+              <li class="mob-contacts-tel__item">
+                <a href="tel:+380961111111" class="mob-contacts-tel__link link"
+                  >096 111 11 11</a
+                >
+              </li>
+              <li class="mob-contacts-mail__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mob-contacts-mail__link link"
+                  >info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="mob-social list">
+              <li class="mob-social__item">
+                <a
+                  href=""
+                  class="mob-social__link link"
+                  target="_blank"
+                  rel="noopener nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mob-social__item">
+                <a
+                  href=""
+                  class="mob-social__link link"
+                  target="_blank"
+                  rel="noopener nofollow"
+                  >Twitter</a
+                >
+              </li>
+              <li class="mob-social__item">
+                <a
+                  href=""
+                  class="mob-social__link link"
+                  target="_blank"
+                  rel="noopener nofollow"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mob-social__item">
+                <a
+                  href=""
+                  class="mob-social__link link"
+                  target="_blank"
+                  rel="noopener nofollow"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <!----------Main content------------->
     <main>
       <!-----------------------Hero------------------------->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
           <button type="button" class="hero__btn btn" data-modal-open>
             Заказать услугу
           </button>
         </div>
-      </section> -->
+      </section>
       <!-----------------------Features--------------------->
       <section class="features section">
         <div class="container">
@@ -134,35 +225,70 @@
         </div>
       </section>
       <!-------------Directions----------------->
-      <!-- <section class="directions section">
+      <section class="directions section">
         <div class="container">
           <h2 class="directions__title title">Чем мы занимаемся</h2>
           <ul class="list-img list">
             <li class="list-img__item">
               <div class="list-img__thumb">
-                <img src="./images/about-img-1.jpg" alt="десктоп" width="370" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/about-img-1.jpg    1x,
+                      ./images/about-img-1-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/about-img-1.jpg"
+                    alt="десктоп"
+                    width="370"
+                  />
+                </picture>
                 <p class="list-img__text">Десктопные приложения</p>
               </div>
             </li>
             <li class="list-img__item">
               <div class="list-img__thumb">
-                <img
-                  src="./images/about-img-2.jpg"
-                  alt="мобильный телефон"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/about-img-2.jpg    1x,
+                      ./images/about-img-2-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/about-img-2.jpg"
+                    alt="десктоп"
+                    width="370"
+                  />
+                </picture>
                 <p class="list-img__text">Мобильные приложения</p>
               </div>
             </li>
             <li class="list-img__item">
               <div class="list-img__thumb">
-                <img src="./images/about-img-3.jpg" alt="планшет" width="370" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/about-img-3.jpg    1x,
+                      ./images/about-img-3-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/about-img-3.jpg"
+                    alt="десктоп"
+                    width="370"
+                  />
+                </picture>
                 <p class="list-img__text">Дизайнерские решения</p>
               </div>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-------------Team------------->
       <section class="team section">
         <div class="container">
@@ -170,12 +296,35 @@
           <ul class="team__list list">
             <!--foto of worker-->
             <li class="team__item">
-              <img
-                class="team__picture"
-                src="./images/foto-img-1.jpg"
-                alt="фото работника"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/foto-img-1.jpg    1x,
+                    ./images/foto-img-1-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/foto-img-1-tab1x.jpg 1x,
+                    ./images/foto-img-1-tab2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/foto-img-1-mob1x.jpg 1x,
+                    ./images/foto-img-1-mob2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="team__picture"
+                  src="./images/foto-img-1-mob1x.jpg"
+                  alt="фото работника"
+                  width="450"
+                />
+              </picture>
               <h3 class="team__text">Игорь Демьяненко</h3>
               <p lang="en" class="team__position">Product Designer</p>
               <!--social menu-->
@@ -212,12 +361,35 @@
             </li>
             <!--foto of worker-->
             <li class="team__item">
-              <img
-                class="team__picture"
-                src="./images/foto-img-2.jpg"
-                alt="фото работника"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/foto-img-2.jpg    1x,
+                    ./images/foto-img-2-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/foto-img-2-tab1x.jpg 1x,
+                    ./images/foto-img-2-tab2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/foto-img-2-mob1x.jpg 1x,
+                    ./images/foto-img-2-mob2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="team__picture"
+                  src="./images/foto-img-2-mob1x.jpg"
+                  alt="фото работника"
+                  width="450"
+                />
+              </picture>
               <h3 class="team__text">Ольга Репина</h3>
               <p lang="en" class="team__position">Frontend Developer</p>
               <!--social menu-->
@@ -254,12 +426,35 @@
             </li>
             <!--foto of worker-->
             <li class="team__item">
-              <img
-                class="team__picture"
-                src="./images/foto-img-3.jpg"
-                alt="фото работника"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/foto-img-3.jpg    1x,
+                    ./images/foto-img-3-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/foto-img-3-tab1x.jpg 1x,
+                    ./images/foto-img-3-tab2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/foto-img-3-mob1x.jpg 1x,
+                    ./images/foto-img-3-mob2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="team__picture"
+                  src="./images/foto-img-3-mob1x.jpg"
+                  alt="фото работника"
+                  width="450"
+                />
+              </picture>
               <h3 class="team__text">Николай Тарасов</h3>
               <p lang="en" class="team__position">Marketing</p>
               <!--social menu-->
@@ -296,12 +491,35 @@
             </li>
             <!--foto of worker-->
             <li class="team__item">
-              <img
-                class="team__picture"
-                src="./images/foto-img-4.jpg"
-                alt="фото работника"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/foto-img-4.jpg    1x,
+                    ./images/foto-img-4-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/foto-img-4-tab1x.jpg 1x,
+                    ./images/foto-img-4-tab2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/foto-img-4-mob1x.jpg 1x,
+                    ./images/foto-img-4-mob2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="team__picture"
+                  src="./images/foto-img-4-mob1x.jpg"
+                  alt="фото работника"
+                  width="450"
+                />
+              </picture>
               <h3 class="team__text">Михаил Ермаков</h3>
               <p lang="en" class="team__position">UI Designer</p>
               <!--social menu-->
@@ -386,7 +604,7 @@
       </section>
     </main>
     <!------Footer----------->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="footer__container container">
         <div class="footer__adress">
           <a href="" lang="en" class="footer__logo logo link"
@@ -441,8 +659,8 @@
             </li>
           </ul>
         </div>
-        <div class="footer-form">
-          <form>
+        <div class="footer__form">
+          <form class="footer-form">
             <p class="footer__text">Подпишитесь на рассылку</p>
             <input
               type="email"
@@ -458,7 +676,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <!------------------Backdrop----------------->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -544,5 +762,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
