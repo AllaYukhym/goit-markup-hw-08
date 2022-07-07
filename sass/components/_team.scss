@@ -1,7 +1,7 @@
 .team {
   padding-top: 60px;
   padding-bottom: 60px;
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -15,7 +15,7 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: $secondary-text-color;
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     margin-bottom: 50px;
     font-size: 36px;
   }
@@ -33,10 +33,10 @@
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: calc((100% - 30px) / 2);
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     width: calc((100% - 90px) / 4);
   }
 }
@@ -70,12 +70,10 @@
 }
 
 .socials__team {
-  padding-bottom: 24px;
-  @media screen and (min-width: 1200px) {
-    padding-bottom: 30px;
+  margin-bottom: 24px;
+  @include desktop {
+    margin-bottom: 30px;
   }
-  // FIXME: dont know what right padding or margin?
-  // margin-bottom: 24px;
 }
 
 .socials__item {
@@ -112,12 +110,3 @@
 .team {
   background: $btn-color;
 }
-
-// .socials {
-//   display: flex;
-//   justify-content: center;
-// }
-
-// .socials__team {
-//   margin-bottom: 30px;
-// }

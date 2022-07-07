@@ -3,9 +3,10 @@
     display: none;
   }
 }
+
 @include desktop {
   .directions {
-    padding-top: 0;
+    padding-bottom: 94px;
   }
 
   .directions__title {
@@ -20,10 +21,7 @@
 
   .list-img {
     display: flex;
-  }
-
-  .list-img__item + .list-img__item {
-    margin-left: 30px;
+    gap: 30px;
   }
 
   .list-img__thumb {

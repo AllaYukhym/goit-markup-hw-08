@@ -1,11 +1,11 @@
 .footer__container {
   display: flex;
-  @media screen and (min-width: 320px) and (max-width: 480px) {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
     flex-wrap: wrap;
     gap: 60px;
     justify-content: center;
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     flex-wrap: wrap;
   }
   @include desktop {
@@ -21,19 +21,19 @@
 }
 
 .footer__logo {
+  display: inline-block;
   padding-top: 0;
   padding-bottom: 0;
   margin-bottom: 20px;
 
   color: $white-color;
-  display: inline-block;
 }
 
 .footer__adress {
-  @media screen and (min-width: 320px) and (max-width: 768px) {
+  @media screen and (min-width: 320px) and (max-width: 1199px) {
     text-align: center;
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     margin-left: 76px;
     margin-right: 165px;
     margin-bottom: 60px;
@@ -65,7 +65,7 @@
 
 /* --------------footer-socials-------------- */
 .footer__socials {
-  @media screen and (min-width: 320px) and (max-width: 768px) {
+  @media screen and (min-width: 320px) and (max-width: 1199px) {
     text-align: center;
   }
   @include desktop {
@@ -80,11 +80,6 @@
   line-height: 1.14;
   text-transform: uppercase;
   color: $white-color;
-  @media screen and(max-width:768px) and(max-width:1199px) {
-    margin-left: 0;
-    margin-right: 0;
-    // FIXME    up    i am not sure it good
-  }
 }
 
 .socials__link--black {
@@ -96,8 +91,13 @@
 
 /* ------------------footer--form---------------- */
 .footer__form {
-  @media screen and (min-width: 320px) and (max-width: 768px) {
+  @media screen and (min-width: 320px) and (max-width: 1199px) {
     text-align: center;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    display: block;
+    width: 450px;
+    margin-left: 166px;
   }
   @include desktop {
     margin-left: auto;
@@ -105,14 +105,6 @@
 }
 
 .footer-form__input {
-  @media screen and (min-width: 320px) and (max-width: 768px) {
-    width: 450px;
-    margin-bottom: 20px;
-  }
-  @media screen and(min-width:768px) and(max-width:1199px) {
-    margin-left: 166px;
-    // FIXME    up    i am not sure it good
-  }
   height: 50px;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -129,6 +121,10 @@
   &:focus {
     border-color: $accent-color;
   }
+  @media screen and (min-width: 320px) and (max-width: 1199px) {
+    width: 450px;
+    margin-bottom: 20px;
+  }
   @include desktop {
     width: 358px;
     margin-right: 12px;
@@ -139,13 +135,8 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  min-width: 200px;
+  width: 200px;
   padding: 10px 29px;
-  @media screen and (min-width: 768px) and(max-width:1199px) {
-    display: flex;
-    margin-left: 291px;
-    // FIXME    up    i am not sure it good
-  }
 }
 
 .footer-form__icon {
