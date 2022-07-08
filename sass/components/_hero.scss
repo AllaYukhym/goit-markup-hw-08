@@ -1,5 +1,5 @@
 .hero {
-  max-width: $mobile;
+  max-width: 480px;
   margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 118px;
@@ -22,7 +22,7 @@
       url(../images/hero-bg-mob2x.jpg);
   }
   @include tablet {
-    max-width: $tablet;
+    max-width: 768px;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
@@ -56,7 +56,10 @@
 }
 
 .hero__title {
-  width: 360px;
+  width: calc(100% - 30px);
+  @include mobile {
+    width: 360px;
+  }
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
